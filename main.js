@@ -119,11 +119,10 @@ class Field {
         nextMove();
     }
 }
-
-//const rows = prompt('How many rows would you like in your game?')
-//const columns = prompt('How many columns would you like in your game?')
-//const holePerCent = prompt('What percentage of holes would you like?')
-const gameField = Field.generateField(4, 15, 25);
-const myField = new Field(gameField, 4, 15);
+const rows = parseInt(prompt('How many rows would you like in your game? '))
+const columns = parseInt(prompt('How many columns would you like in your game? '))
+const holePerCent = parseInt(prompt('What percentage of holes would you like? '))
+const gameField = Field.generateField(rows, columns, holePerCent);10
+const myField = new Field(gameField, rows, columns);
 myField.instructions();
 myField.print(gameField, gameOver);
